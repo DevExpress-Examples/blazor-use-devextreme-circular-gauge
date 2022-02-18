@@ -7,7 +7,6 @@ This project demonstrates how to incorporate a DevExtreme Map widget in a Blazor
 
 - [Index.razor](https://github.com/DevExpress-Examples/How-to-use-DevExtreme-maps-in-a-Blazor-application/blob/21.2.5%2B/T1020075/Pages/Index.razor#L10)
 - [_Host.cshtml](https://github.com/DevExpress-Examples/How-to-use-DevExtreme-maps-in-a-Blazor-application/blob/21.2.5+/T1020075/Pages/_Host.cshtml#L42)
-- ...
 
 ## Documentation
 
