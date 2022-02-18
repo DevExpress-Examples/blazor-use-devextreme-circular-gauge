@@ -5,7 +5,7 @@
 <!-- default badges end -->
 # Blazor - How to use DevExtreme maps in a Blazor application
 
-This project demonstrates how to incorporate a DevExtreme Map widget in a Blazor application
+This project demonstrates how to incorporate a DevExtreme Map widget in a Blazor application.
 
 
 ## Files to Look At
