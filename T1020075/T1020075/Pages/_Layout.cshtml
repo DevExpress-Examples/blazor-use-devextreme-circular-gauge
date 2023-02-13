@@ -13,11 +13,12 @@
     <link href="~/css/site.css" rel="stylesheet" />
     <link href="T1020075.styles.css" rel="stylesheet" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
     <!-- DevExtreme themes -->
-    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/21.2.5/css/dx.common.css">
-    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/21.2.5/css/dx.light.css">
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/22.1.3/css/dx.common.css">
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/22.1.3/css/dx.light.css">
     <!-- DevExtreme library -->
-    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/21.2.5/js/dx.all.js"></script>
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/22.1.3/js/dx.all.js"></script>
         <script>
             var mapInstance;
             var mapTypes = [{
@@ -35,7 +36,7 @@
                 mapInstance = $("#map").dxMap({
                     center: "Brooklyn Bridge,New York,NY",
                     zoom: 14,
-                    height: 400,
+                    height: "100%",
                     width: "100%",
                     provider: "bing",
                     apiKey: {

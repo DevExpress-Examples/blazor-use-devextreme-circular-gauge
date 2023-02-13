@@ -5,15 +5,16 @@
 <!-- default badges end -->
 # Blazor - How to use DevExtreme maps in a Blazor application
 
-This project demonstrates how to incorporate a DevExtreme Map widget in a Blazor application.
+This project demonstrates how to incorporate a [DevExtreme Map widget](https://js.devexpress.com/Documentation/Guide/UI_Components/Map/Overview/) in a Blazor application.
 
+![DevExtreme Map widget](devextreme-maps.png)
 
-## Files to Look At
+## Files to Review
 
-- [Index.razor](https://github.com/DevExpress-Examples/How-to-use-DevExtreme-maps-in-a-Blazor-application/blob/21.2.5%2B/T1020075/Pages/Index.razor#L10)
-- [_Host.cshtml](https://github.com/DevExpress-Examples/How-to-use-DevExtreme-maps-in-a-Blazor-application/blob/21.2.5+/T1020075/Pages/_Host.cshtml#L42)
+- [Index.razor](./T1020075/T1020075/Pages/Index.razor)
+- [_Layout.cshtml](./T1020075/T1020075/Pages/_Layout.cshtml)
 
 ## Documentation
 
-- [Add DevExtreme Widgets to an Application](https://docs.devexpress.com/Blazor/403578/common-concepts/add-devextreme-widgets-to-application)
+- [Add DevExtreme Widgets to a Blazor Application](https://docs.devexpress.com/Blazor/403578/common-concepts/add-devextreme-widgets-to-application)
 
