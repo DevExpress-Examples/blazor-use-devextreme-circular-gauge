@@ -1,3 +1,7 @@
+<!-- default badges list -->
+[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1069428)
+[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+<!-- default badges end -->
 # Blazor - Use Gauges, HTML Editor, and Map in a Blazor Application
 
 Blazor applications allow you to use external JavaScript libraries to integrate components that are not currently present in the DevExpress Blazor suite. This example demonstrates how to incorporate [DevExtreme widgets](https://js.devexpress.com/Demos/WidgetsGallery/) into a Blazor application. 
