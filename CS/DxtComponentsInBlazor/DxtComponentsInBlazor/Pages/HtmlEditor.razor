@@ -1,0 +1,16 @@
+﻿@page "/htmlEditor"
+@using JSWidgetsRCL.DevExtremeComponents
+
+<DevExtremeHtmlEditor @bind-HtmlString="@HtmlValue" />
+<br />
+<br />
+<h1>HTML FROM EDITOR:</h1>
+@((MarkupString)HtmlValue)
+
+@code {
+    string HtmlValue { get; set; }
+
+    protected override async Task OnInitializedAsync() {
+        HtmlValue = await File.ReadAllTextAsync("./Data/sample.html");
+    }
+}

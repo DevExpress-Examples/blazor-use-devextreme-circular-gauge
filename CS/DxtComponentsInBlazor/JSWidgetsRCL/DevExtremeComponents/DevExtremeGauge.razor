@@ -1,0 +1,43 @@
+﻿@inject IJSRuntime JS
+@implements IAsyncDisposable
+
+<DevExtremeResources ResourcesLoaded="@(() => ResourcesLoaded = true)" />
+
+@if(ResourcesLoaded) {
+    <div @ref="Gauge"></div>
+}
+
+@code {
+    bool ResourcesLoaded { get; set; }
+    bool ClientInitializationInProgress { get; set; }
+
+    ElementReference Gauge { get; set; }
+
+    IJSObjectReference ClientModule { get; set; }
+    IJSObjectReference ClientGauge { get; set; }
+
+    [Parameter]
+    public object DataSource { get; set; }
+
+    protected sealed override async Task OnAfterRenderAsync(bool firstRender) {
+        if(ResourcesLoaded && ClientGauge == null && !ClientInitializationInProgress) {
+            ClientInitializationInProgress = true;
+            ClientModule = await JS.InvokeAsync<IJSObjectReference>("import", "./_content/JSWidgetsRCL/DevExtremeComponents/DevExtremeGauge.razor.js");
+            ClientGauge = await ClientModule.InvokeAsync<IJSObjectReference>("initializeGauge", Gauge, DataSource);
+            ClientInitializationInProgress = false;
+        }
+    }
+
+    protected override async Task OnParametersSetAsync() {
+        if(ClientGauge != null) {
+            await ClientModule.InvokeVoidAsync("changeGaugeDataSource", ClientGauge, DataSource);
+        }
+    }
+
+    async ValueTask IAsyncDisposable.DisposeAsync() {
+        if(ClientGauge != null)
+            await ClientGauge.DisposeAsync();
+        if(ClientModule != null)
+            await ClientModule.DisposeAsync();
+    }
+}
