@@ -34,4 +34,4 @@ The **DxtComponentsInBlazor** project references **JSWidgetsRCL**. This allows y
 
 ## Documentation
 
-[](https://docs.devexpress.com/Blazor/403578)
+[Add JavaScript-based Components to an Application](https://docs.devexpress.com/Blazor/403578)
