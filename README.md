@@ -7,8 +7,7 @@
 
 This example shows how you can embed [DevExtreme widgets](https://js.devexpress.com/Demos/WidgetsGallery/) into your Blazor application. You can use the same methods to integrate any JavaScript-based libraries.
 
-
-![HTML Editor in DevExpress Blazor App](readme.md)
+![HTML Editor in DevExpress Blazor App](htmlEditor.png)
 
 ## Implementation Details
 
@@ -18,7 +17,7 @@ The example solution contains **JSWidgetsRCL** and **DxtComponentsInBlazor** pro
 * [HTML Editor](https://js.devexpress.com/Demos/WidgetsGallery/Demo/HtmlEditor/Overview/jQuery/Light/)
 * [Map](https://js.devexpress.com/Demos/WidgetsGallery/Demo/VectorMap/Overview/jQuery/Light/)
 
-For each widget, _DevExtreme<WidgetName>.razor_ and _DevExtreme<WidgetName>.razor.js_ files store wrapper implementation. Look at _DevExtremeHtmlEditor.razor_ for an example on how to implement an event. The wrapper registers a [custom event handler](/JSWidgetsRCL/EventHandlers.cs), implements it on the [Blazor side](/JSWidgetsRCL/DevExtremeComponents/DevExtremeHtmlEditor.razor#L21) and maps it to the corresponding [DevExtreme event handler](/JSWidgetsRCL/DevExtremeComponents/DevExtremeHtmlEditor.razor.js#L7). You can implement other events in the same way.
+For each widget, _DevExtreme<WidgetName>.razor_ and _DevExtreme<WidgetName>.razor.js_ files store wrapper implementation. Look at _DevExtremeHtmlEditor.razor_ for an example on how to implement an event. The wrapper registers a [custom event handler](./CS/DxtComponentsInBlazor/JSWidgetsRCL/EventHandlers.cs), implements it on the [Blazor side](./CS/DxtComponentsInBlazor/JSWidgetsRCL/DevExtremeComponents/DevExtremeHtmlEditor.razor#L21) and maps it to the corresponding [DevExtreme event handler](./CS/DxtComponentsInBlazor/JSWidgetsRCL/DevExtremeComponents/DevExtremeHtmlEditor.razor.js#L7). You can implement other events in the same way.
 
 Each widget also renders the **DevExtremeResources.razor** component. This component loads DevExtreme resources when you open a page with a DevExtreme component for the first time.
 
@@ -31,10 +30,10 @@ The **DxtComponentsInBlazor** project references **JSWidgetsRCL**. This allows y
 
 ## Files to Review
 
-[DevExtremeResources.razor](/JSWidgetsRCL/DevExtremeComponents/DevExtremeResources.razor)
-[DevExtremeResources.razor.js](/JSWidgetsRCL/DevExtremeComponents/DevExtremeResources.razor.js)
-[DevExtremeHtmlEditor.razor](/JSWidgetsRCL/DevExtremeComponents/DevExtremeHtmlEditor.razor)
+[DevExtremeResources.razor](./CS/DxtComponentsInBlazor/JSWidgetsRCL/DevExtremeComponents/DevExtremeResources.razor)
+[DevExtremeResources.razor.js](./CS/DxtComponentsInBlazor/JSWidgetsRCL/DevExtremeComponents/DevExtremeResources.razor.js)
+[DevExtremeHtmlEditor.razor](./CS/DxtComponentsInBlazor/JSWidgetsRCL/DevExtremeComponents/DevExtremeHtmlEditor.razor)
 
 ## Documentation
 
-[Add JavaScript-based Components to an Application](https://docs.devexpress.com/Blazor/403578)
+[Add JavaScript-Based Components to an Application](https://docs.devexpress.com/Blazor/403578/common-concepts/add-js-components-to-application)
