@@ -30,9 +30,9 @@ The **DxtComponentsInBlazor** project references **JSWidgetsRCL**. This allows y
 
 ## Files to Review
 
-[DevExtremeResources.razor](./CS/DxtComponentsInBlazor/JSWidgetsRCL/DevExtremeComponents/DevExtremeResources.razor)
-[DevExtremeResources.razor.js](./CS/DxtComponentsInBlazor/JSWidgetsRCL/DevExtremeComponents/DevExtremeResources.razor.js)
-[DevExtremeHtmlEditor.razor](./CS/DxtComponentsInBlazor/JSWidgetsRCL/DevExtremeComponents/DevExtremeHtmlEditor.razor)
+* [DevExtremeResources.razor](./CS/DxtComponentsInBlazor/JSWidgetsRCL/DevExtremeComponents/DevExtremeResources.razor)  
+* [DevExtremeResources.razor.js](./CS/DxtComponentsInBlazor/JSWidgetsRCL/DevExtremeComponents/DevExtremeResources.razor.js)  
+* [DevExtremeHtmlEditor.razor](./CS/DxtComponentsInBlazor/JSWidgetsRCL/DevExtremeComponents/DevExtremeHtmlEditor.razor)  
 
 ## Documentation
 
