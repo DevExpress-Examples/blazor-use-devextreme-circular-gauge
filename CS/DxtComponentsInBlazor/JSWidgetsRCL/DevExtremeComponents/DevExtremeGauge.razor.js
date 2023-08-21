@@ -34,7 +34,6 @@ export async function changeGaugeDataSource(gauge, datasource) {
     const value = !!datasource ? datasource.mean : null;
     const subValues = !!datasource ? [ datasource.min, datasource.max] : [ ];
 
-    // TODO right-way to change gauge parameters
     gauge.value(value);
     gauge.subvalues(subValues);
 }

@@ -1,20 +1,39 @@
 <!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/460853146/23.1.4%2B)
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1069428)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# Blazor - How to use DevExtreme maps in a Blazor application
+# Blazor - Use Gauges, HTML Editor, and Map in a Blazor Application
 
-This project demonstrates how to incorporate a [DevExtreme Map widget](https://js.devexpress.com/Documentation/Guide/UI_Components/Map/Overview/) in a Blazor application.
+This example shows how you can embed [DevExtreme widgets](https://js.devexpress.com/Demos/WidgetsGallery/) into your Blazor application. You can use the same methods to integrate any JavaScript-based libraries.
 
-![DevExtreme Map widget](devextreme-maps.png)
+
+![HTML Editor in DevExpress Blazor App](readme.md)
+
+## Implementation Details
+
+The example solution contains **JSWidgetsRCL** and **DxtComponentsInBlazor** projects. The first project wraps the following DevExtreme widgets:
+
+* [Gauge](https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gauges/Overview/jQuery/Light/)
+* [HTML Editor](https://js.devexpress.com/Demos/WidgetsGallery/Demo/HtmlEditor/Overview/jQuery/Light/)
+* [Map](https://js.devexpress.com/Demos/WidgetsGallery/Demo/VectorMap/Overview/jQuery/Light/)
+
+For each widget, _DevExtreme<WidgetName>.razor_ and _DevExtreme<WidgetName>.razor.js_ files store wrapper implementation. Look at _DevExtremeHtmlEditor.razor_ for an example on how to implement an event. The wrapper registers a [custom event handler](/JSWidgetsRCL/EventHandlers.cs), implements it on the [Blazor side](/JSWidgetsRCL/DevExtremeComponents/DevExtremeHtmlEditor.razor#L21) and maps it to the corresponding [DevExtreme event handler](/JSWidgetsRCL/DevExtremeComponents/DevExtremeHtmlEditor.razor.js#L7). You can implement other events in the same way.
+
+Each widget also renders the **DevExtremeResources.razor** component. This component loads DevExtreme resources when you open a page with a DevExtreme component for the first time.
+
+The **DxtComponentsInBlazor** project references **JSWidgetsRCL**. This allows you to use wrappers as regular Blazor components. The following code adds a `DevExtremeMap` wrapper component:
+
+
+```Razor
+<DevExtremeMap />
+```
 
 ## Files to Review
 
-- [Index.razor](./T1020075/T1020075/Pages/Index.razor)
-- [_Layout.cshtml](./T1020075/T1020075/Pages/_Layout.cshtml)
+[DevExtremeResources.razor](/JSWidgetsRCL/DevExtremeComponents/DevExtremeResources.razor)
+[DevExtremeResources.razor.js](/JSWidgetsRCL/DevExtremeComponents/DevExtremeResources.razor.js)
+[DevExtremeHtmlEditor.razor](/JSWidgetsRCL/DevExtremeComponents/DevExtremeHtmlEditor.razor)
 
 ## Documentation
 
-- [Add DevExtreme Widgets to a Blazor Application](https://docs.devexpress.com/Blazor/403578/common-concepts/add-devextreme-widgets-to-application)
-
+[Add JavaScript-based Components to an Application](https://docs.devexpress.com/Blazor/403578)
