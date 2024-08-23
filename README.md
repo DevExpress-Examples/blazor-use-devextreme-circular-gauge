@@ -6,7 +6,7 @@ This example shows how you can embed [DevExtreme widgets](https://js.devexpress.
 
 ## Implementation Details
 
-The example solution contains **JSWidgetsRCL** and **DxtComponentsInBlazor** projects. The first project wraps the DevExtreme [Circular Gauge](https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gauges/Overview/jQuery/Light/) widgets.
+The example solution contains **JSWidgetsRCL** and **DxtComponentsInBlazor** projects. The first project wraps the DevExtreme [Circular Gauge](https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gauges/Overview/jQuery/Light/) widget.
 
 _DevExtremeGauge.razor_ and _DevExtremeGauge.razor.js_ files store wrapper implementation. The widget also renders the **DevExtremeResources.razor** component. This component loads DevExtreme resources when you open a page with a DevExtreme component for the first time.
 
