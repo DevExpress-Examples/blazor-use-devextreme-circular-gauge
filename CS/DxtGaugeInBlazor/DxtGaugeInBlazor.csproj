@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute> 
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="JSWidgetsRCL\**" />
+    <Content Remove="JSWidgetsRCL\**" />
+    <EmbeddedResource Remove="JSWidgetsRCL\**" />
+    <None Remove="JSWidgetsRCL\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Blazor" Version="24.1.6-pre-24236" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="JSWidgetsRCL\JSWidgetsRCL.csproj" />
+  </ItemGroup>
+</Project>

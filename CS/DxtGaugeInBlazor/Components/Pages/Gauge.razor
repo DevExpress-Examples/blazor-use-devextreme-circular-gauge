@@ -1,0 +1,19 @@
+﻿@page "/gauge"
+@using JSWidgetsRCL.DevExtremeComponents
+@rendermode InteractiveServer
+
+<DevExtremeGauge DataSource="DataSource" />
+
+@code {
+    object DataSource { get; set; }
+
+    protected override void OnInitialized() {
+        DataSource = new GaugeValue() { Min = 28, Max = 38, Mean = 35 };
+    }
+
+    public class GaugeValue {
+        public double Min { get; set; }
+        public double Max { get; set; }
+        public double Mean { get; set; }
+    }
+}
