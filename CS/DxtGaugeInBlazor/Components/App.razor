@@ -7,10 +7,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
-    <link href=@AppendVersion("_content/DevExpress.Blazor.Themes/blazing-berry.bs5.min.css") rel="stylesheet" />
-    <link href=@AppendVersion("https://cdn3.devexpress.com/jslib/24.2.3/css/dx.common.css") rel="stylesheet" />
-    <link href=@AppendVersion("https://cdn3.devexpress.com/jslib/24.2.3/css/dx.material.purple.light.compact.css") rel="stylesheet" />
+    <link href=@AppendVersion("https://cdn3.devexpress.com/jslib/25.1.3/css/dx.fluent.blue.light.css") rel="stylesheet" />
     @DxResourceManager.RegisterScripts()
+    @DxResourceManager.RegisterTheme(Themes.Fluent.Clone(properties => {
+        properties.UseBootstrapStyles = true;
+        properties.AddFilePaths(["css/theme-fluent.css"]);
+    }))
     <link href=@AppendVersion("css/site.css") rel="stylesheet" />
     <link href=@AppendVersion("DxtGaugeInBlazor.styles.css") rel="stylesheet" />
     <HeadOutlet />
