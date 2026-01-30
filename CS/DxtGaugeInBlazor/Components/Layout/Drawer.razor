@@ -1,0 +1,38 @@
+﻿@inherits DrawerStateComponentBase
+
+<div class="drawer-container">
+    <DxDrawer PanelWidth="@PanelWidth"
+              CssClass="@(CssClass + " mobile")"
+              Mode="DrawerMode.Overlap"
+              IsOpen="@ToggledDrawer"
+              BodyTemplate="BodyTemplate"
+              HeaderTemplate="HeaderTemplate"
+              FooterTemplate="FooterTemplate"
+              ApplyBackgroundShading="false"
+              ClosedCssClass="panel-closed">
+        <TargetContent>
+            <DxDrawer PanelWidth="@PanelWidth"
+                      CssClass="@CssClass"
+                      Mode="DrawerMode.Shrink"
+                      IsOpen="@(!ToggledDrawer)"
+                      BodyTemplate="BodyTemplate"
+                      HeaderTemplate="HeaderTemplate"
+                      FooterTemplate="FooterTemplate"
+                      OpenCssClass="panel-open">
+                <TargetContent>
+                    <div class="navigation-drawer-shading"></div>
+                    @TargetContent
+                </TargetContent>
+            </DxDrawer>
+        </TargetContent>
+    </DxDrawer>
+</div>
+
+@code {
+    [Parameter] public string? CssClass { get; set; }
+    [Parameter] public string? PanelWidth { get; set; }
+    [Parameter] public RenderFragment? TargetContent { get; set; }
+    [Parameter] public RenderFragment? BodyTemplate { get; set; }
+    [Parameter] public RenderFragment? HeaderTemplate { get; set; }
+    [Parameter] public RenderFragment? FooterTemplate { get; set; }
+}

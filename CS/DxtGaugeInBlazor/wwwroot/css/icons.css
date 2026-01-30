@@ -1,0 +1,35 @@
+.icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: currentcolor;
+    mask-image: var(--icon-mask-image);
+    mask-position: center;
+    mask-repeat: no-repeat;
+}
+
+.icon-back {
+    --icon-mask-image: url("/images/back.svg");
+}
+.icon-close {
+    --icon-mask-image: url("/images/close.svg");
+}
+.icon-demos {
+    --icon-mask-image: url("/images/demos.svg");
+}
+.icon-docs {
+    --icon-mask-image: url("/images/doc.svg");
+}
+.icon-menu {
+    --icon-mask-image: url("/images/menu.svg");
+}
+
+/* pages */
+.icon-counter {
+    --icon-mask-image: url("/images/pages/counter.svg");
+}
+.icon-home {
+    --icon-mask-image: url("/images/pages/home.svg");
+}
+.icon-weather {
+    --icon-mask-image: url("/images/pages/weather.svg");
+}

@@ -1,5 +1,5 @@
 ﻿@page "/counter"
-@rendermode InteractiveServer
+
 <PageTitle>Counter</PageTitle>
 
 <h1>Counter</h1>
@@ -9,16 +9,13 @@
         <div class="counter-count">
             @currentCount
         </div>
-        <div class="counter-text">
-            current count
-        </div>
-        <div class="counter-block-back"></div>
+        current count
     </div>
     <DxButton Click="IncrementCount">Click me</DxButton>
 </div>
 
 @code {
-    private int currentCount = 0;
+    private int currentCount;
 
     private void IncrementCount()
     {

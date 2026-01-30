@@ -1,0 +1,44 @@
+﻿.tile {
+    border-radius: 0.75rem;
+    height: 7.5rem;
+    transition: box-shadow 0.2s;
+    width: 14.375rem;
+    border: 1px solid var(--dxds-color-border-neutral-default-rest);
+}
+
+.tile:hover {
+    box-shadow: 0 4px 8px 0 rgba(170, 170, 170, 0.24), 0 0 2px 0 rgba(170, 170, 170, 0.2);
+}
+
+.tile ::deep > a {
+    text-decoration: none;
+}
+
+::deep .tile-content {
+    padding: 1rem;
+}
+
+::deep .tile-icon {
+    border-radius: 0.375rem;
+    height: 2.75rem;
+    padding: 0.75rem;
+    width: 2.75rem;
+    border: 1px solid var(--dxds-color-border-neutral-default-rest);
+}
+
+::deep .tile-title {
+    align-self: center;
+    color: var(--dxds-color-content-neutral-default-rest);
+    font-size: var(--dxds-font-size-base-md);
+    font-weight: var(--dxds-font-weight-base-strong);
+    letter-spacing: var(--dxds-letter-spacing-base-md);
+    line-height: var(--dxds-line-height-base-md);
+}
+
+::deep .tile-description {
+    color: var(--dxds-color-content-neutral-subdued-rest);
+    font-size: var(--dxds-font-size-base-sm);
+    font-weight: var(--dxds-font-weight-base-default);
+    letter-spacing: var(--dxds-letter-spacing-base-sm);
+    line-height: var(--dxds-line-height-base-sm);
+}

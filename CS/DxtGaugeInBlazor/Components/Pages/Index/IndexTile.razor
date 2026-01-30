@@ -1,0 +1,40 @@
+﻿@inherits DrawerStateComponentBase
+
+<div class="tile">
+    <NavLink href="@AddDrawerStateToUrl(NavigateUrl)">
+        <DxGridLayout CssClass="tile-content" ColumnSpacing="0.75rem" RowSpacing="0.75rem">
+            <Rows>
+                <DxGridLayoutRow Areas="icon title" Height="auto" />
+                <DxGridLayoutRow Areas="description description" Height="auto" />
+            </Rows>
+            <Columns>
+                <DxGridLayoutColumn Width="auto" />
+                <DxGridLayoutColumn />
+            </Columns>
+            <Items>
+                <DxGridLayoutItem Area="icon" CssClass="tile-icon">
+                    <Template>
+                        <div class="@("icon " + IconCssClass)" aria-hidden="true"></div>
+                    </Template>
+                </DxGridLayoutItem>
+                <DxGridLayoutItem Area="title" CssClass="tile-title">
+                    <Template>
+                        @Title
+                    </Template>
+                </DxGridLayoutItem>
+                <DxGridLayoutItem Area="description" CssClass="tile-description">
+                    <Template>
+                        @Description
+                    </Template>
+                </DxGridLayoutItem>
+            </Items>
+        </DxGridLayout>
+    </NavLink>
+</div>
+
+@code {
+    [Parameter] public string NavigateUrl { get; set; } = string.Empty;
+    [Parameter] public string? Title { get; set; }
+    [Parameter] public string? Description { get; set; }
+    [Parameter] public string? IconCssClass { get; set; }
+}
