@@ -1,37 +1,53 @@
-﻿@inherits LayoutComponentBase
+﻿@inherits DrawerStateLayoutComponentBase
 @inject NavigationManager NavigationManager
 
 <div class="page">
-    <DxGridLayout CssClass="page-layout">
-        <Rows>
-            <DxGridLayoutRow Areas="sidebar header" Height="auto"></DxGridLayoutRow>
-            <DxGridLayoutRow Areas="sidebar content"></DxGridLayoutRow>
-        </Rows>
-        <Columns>
-            <DxGridLayoutColumn Width="auto" />
-            <DxGridLayoutColumn />
-        </Columns>
-        <Items>
-            <DxGridLayoutItem Area="sidebar" CssClass="layout-sidebar">
-                <Template>
-                    <NavMenu />
-                </Template>
-            </DxGridLayoutItem>
-            <DxGridLayoutItem Area="content" CssClass="content px-4">
-                <Template>
-                    <div class="w-100 nav-buttons-container">
-                        <NavLink id="menu-top" class="button-link hidden" onclick="(document.getElementById('sidebar').classList.toggle('auto-expanded'), document.getElementById('menu-top').classList.toggle('hidden'))">
-                            <DxButton RenderStyle="@ButtonRenderStyle.Dark" RenderStyleMode="@ButtonRenderStyleMode.Text" CssClass="menu-button" IconCssClass="icon icon-menu"></DxButton>
+    <Drawer CssClass="navigation-drawer" PanelWidth="240px">
+        <HeaderTemplate>
+            <div class="navigation-drawer-header">
+                <NavLink href="@AddDrawerStateToUrl("/")">
+                    <img class="logo" src="images/logo.svg" alt="DevExpress logo" />
+                </NavLink>
+                <NavLink aria-label="Close menu" href="@AddDrawerStateToUrlToggled(LocalPath)">
+                    <DxButton aria-label="Close menu" RenderStyle="ButtonRenderStyle.Light" RenderStyleMode="ButtonRenderStyleMode.Text" CssClass="btn-icon-only" IconCssClass="@(ToggledDrawer ? "icon icon-close" : "icon icon-menu")"></DxButton>
+                </NavLink>
+            </div>
+        </HeaderTemplate>
+        <BodyTemplate>
+            <div class="w-100">
+                <NavMenu></NavMenu>
+            </div>
+        </BodyTemplate>
+        <FooterTemplate>
+            <div class="navigation-drawer-footer">
+                <NavLink href="https://docs.devexpress.com/Blazor/400725/blazor-components" class="button-link">
+                    <DxButton Text="Docs" RenderStyle="ButtonRenderStyle.Light" RenderStyleMode="ButtonRenderStyleMode.Text" IconCssClass="icon icon-docs"></DxButton>
+                </NavLink>
+                <NavLink href="https://demos.devexpress.com/blazor/" class="button-link">
+                    <DxButton Text="Demos" RenderStyle="ButtonRenderStyle.Light" RenderStyleMode="ButtonRenderStyleMode.Text" IconCssClass="icon icon-demos"></DxButton>
+                </NavLink>
+            </div>
+        </FooterTemplate>
+        <TargetContent>
+            <div class="drawer-content">
+                <div class="nav-buttons-container">
+                    <NavLink aria-label="Open menu" href="@AddDrawerStateToUrlToggled(LocalPath)" class="menu-button">
+                        <DxButton aria-label="Open menu" RenderStyle="ButtonRenderStyle.Secondary" RenderStyleMode="ButtonRenderStyleMode.Text" CssClass="btn-icon-only" IconCssClass="icon icon-menu"></DxButton>
+                    </NavLink>
+                    @if (LocalPath != "/") {
+                        <NavLink href="@AddDrawerStateToUrl("/")" class="button-link">
+                            <DxButton Text="Back to Home" RenderStyle="ButtonRenderStyle.Secondary" RenderStyleMode="ButtonRenderStyleMode.Text" CssClass="back-button" IconCssClass="icon icon-back"></DxButton>
                         </NavLink>
-                        @if(!string.IsNullOrEmpty(NavigationManager.ToBaseRelativePath(NavigationManager.Uri))) {
-                            <NavLink href="/" class="button-link">
-                                <DxButton RenderStyle="@ButtonRenderStyle.Dark" Text="Back to Home" RenderStyleMode="@ButtonRenderStyleMode.Text" CssClass="menu-button" IconCssClass="icon icon-back"></DxButton>
-                            </NavLink>
-                        }
-                    </div>
+                    }
+                </div>
+                <div class="page-content-container">
                     @Body
-                </Template>
-            </DxGridLayoutItem>
-        </Items>
-    </DxGridLayout>
+                </div>
+            </div>
+        </TargetContent>
+    </Drawer>
 </div>
+
+@code {
+    string LocalPath => new Uri(NavigationManager.Uri).LocalPath;
+}

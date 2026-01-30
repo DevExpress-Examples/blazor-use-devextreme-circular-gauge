@@ -1,0 +1,31 @@
+﻿::deep .index-gridlayout {
+    container-type: inline-size;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: 9rem;
+}
+
+::deep .title {
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+::deep .tiles {
+    --tile-column-count: 4;
+
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(var(--tile-column-count), max-content);
+    justify-content: center;
+
+    @container (max-width: 60.5rem) {
+        --tile-column-count: 3;
+    }
+    @container (max-width: 45.125rem) {
+        --tile-column-count: 2;
+    }
+    @container (max-width: 29.75rem) {
+        --tile-column-count: 1;
+    }
+}
