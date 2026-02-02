@@ -1,3 +1,9 @@
+<!-- default badges list -->
+![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/460853146/25.2.3%2B)
+[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1069428)
+[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+[![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
+<!-- default badges end -->
 # Blazor - Use DevExtreme Circular Gauge in a Blazor Application
 
 This example embeds [DevExtreme widgets](https://js.devexpress.com/Demos/WidgetsGallery/) into your Blazor application.
@@ -69,3 +75,4 @@ You can use the wrapper as a regular Blazor component. The following code adds a
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
