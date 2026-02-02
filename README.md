@@ -36,7 +36,7 @@ The Gauge component renders as an SVG image and does not require DevExtreme styl
 
 ### Implement a Wrapper
 
-_DevExtremeGauge.razor_ and _DevExtremeGauge.razor.js_ files wrap the DevExtreme [Circular Gauge](https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gauges/Overview/jQuery/Light/) widget. During the wrapper's first render, the wrapper executes the [LoadDxResources](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxResourceManager.LoadDxResources(Microsoft.JSInterop.IJSRuntime)?v=24.2) method to force the Resource Manager to load all client scripts:
+_DevExtremeGauge.razor_ and _DevExtremeGauge.razor.js_ files wrap the DevExtreme [Circular Gauge](https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gauges/Overview/jQuery/Light/) widget. During the wrapper's first render, the wrapper executes the [LoadDxResources](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxResourceManager.LoadDxResources(Microsoft.JSInterop.IJSRuntime)) method to force the Resource Manager to load all client scripts:
 
 ```csharp
 protected override async Task OnAfterRenderAsync(bool firstRender) {
@@ -75,4 +75,5 @@ You can use the wrapper as a regular Blazor component. The following code adds a
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
 
