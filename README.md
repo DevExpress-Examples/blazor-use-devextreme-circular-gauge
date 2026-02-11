@@ -68,6 +68,11 @@ You can use the wrapper as a regular Blazor component. The following code adds a
 
 * [Add JavaScript-Based Components to an Application](https://docs.devexpress.com/Blazor/403578/common-concepts/add-js-components-to-application)
 * [DevExtreme Scripts and Stylesheets](https://js.devexpress.com/jQuery/Documentation/Guide/Common/Distribution_Channels/#npm)
+
+## More Examples
+
+* [Blazor - Use DevExtreme Diagram in Blazor Applications](https://github.com/DevExpress-Examples/blazor-use-devextreme-diagram)
+* [Blazor - Use DevExtreme Slider in Blazor Applications](https://github.com/DevExpress-Examples/blazor-use-devextreme-slider)
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
 
@@ -75,5 +80,6 @@ You can use the wrapper as a regular Blazor component. The following code adds a
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
 
 
