@@ -19,7 +19,7 @@ This project demonstrates how to incorporate a DevExtreme Map widget in a Blazor
 - [Add DevExtreme Widgets to an Application](https://docs.devexpress.com/Blazor/403578/common-concepts/add-devextreme-widgets-to-application)
 
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=blazor-use-gauge-map-html-editor&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=blazor-use-gauge-map-html-editor&~~~was_helpful=no)
 
